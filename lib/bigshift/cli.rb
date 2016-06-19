@@ -153,7 +153,7 @@ module BigShift
         db_name = @config[:rs_database_name]
         schema_name = @config[:rs_schema_name]
         table_name = @config[:rs_table_name]
-        prefix = "#{db_name}/#{table_name}/#{db_name}-#{schema_name}-#{table_name}-"
+        prefix = "#{db_name}/#{schema_name}/#{table_name}/#{db_name}-#{schema_name}-#{table_name}-"
         if (s3_prefix = @config[:s3_prefix])
           s3_prefix = s3_prefix.gsub(%r{\A/|/\Z}, '')
           prefix = "#{s3_prefix}/#{prefix}"
